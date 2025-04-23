@@ -9,3 +9,4 @@ Janusz 40
 adrain  24
 jan 23 33
 maciek 12
+JAnek 10
