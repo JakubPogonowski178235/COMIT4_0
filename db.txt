@@ -6,3 +6,6 @@ Krzysztof 20
 Janusz 40
 Krzysztof 20
 Janusz 40
+adrain  24
+jan 23 33
+maciek 12
