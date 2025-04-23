@@ -2,48 +2,51 @@ import java.io.IOException;
 import java.util.Scanner;
 
 class Main {
-    public static void main(String[] args) {
-        try {
-            Service s = new Service();
-            Scanner scanner = new Scanner(System.in);
-            boolean isRunning = true;
+  public static void main(String[] args) {
+    try {
+      Service s = new Service();
+      Scanner scanner = new Scanner(System.in);
 
-            while (isRunning) {
-                System.out.println("\nWybierz operację:");
-                System.out.println("1 - Dodaj nowego studenta");
-                System.out.println("2 - Wypisz wszystkich studentów");
-                System.out.println("3 - Zakończ program");
+      System.out.println("1 - Dodaj studenta");
+      System.out.println("2 - Wyświetl wszystkich studentów");
+      System.out.println("3 - Zakończ program");
+      System.out.print("Wybierz opcję: ");
 
-                int choice = scanner.nextInt();
-                scanner.nextLine(); // Konsumpcja znaku nowej linii
+      int choice = scanner.nextInt();
+      scanner.nextLine();
 
-                switch (choice) {
-                    case 1:
-                        System.out.println("Podaj imię i wiek oddzielając spacją:");
-                        String input = scanner.nextLine();
-                        String[] parts = input.split(" ");
-                        String name = parts[0];
-                        int age = Integer.parseInt(parts[1]);
-                        s.addStudent(new Student(name, age));
-                        break;
-                    case 2:
-                        var students = s.getStudents();
-                        System.out.println("\nLista studentów:");
-                        for (Student current : students) {
-                            System.out.println(current.ToString());
-                        }
-                        break;
-                    case 3:
-                        System.out.println("Kończenie programu...");
-                        isRunning = false;
-                        break;
-                    default:
-                        System.out.println("Nieprawidłowy wybór, spróbuj ponownie.");
-                        break;
-                }
-            }
-        } catch (IOException e) {
-            System.out.println("Wystąpił błąd: " + e.getMessage());
-        }
+      switch (choice) {
+        case 1:
+          System.out.println("Podaj imię studenta:");
+          String name = scanner.nextLine();
+
+          System.out.println("Podaj nazwisko studenta:");
+          String surname = scanner.nextLine();
+
+          System.out.println("Podaj wiek studenta:");
+          int age = scanner.nextInt();
+
+          s.addStudent(new Student(name, surname, age));
+          System.out.println("Dodano studenta!");
+          break;
+
+        case 2:
+          System.out.println("Lista wszystkich studentów:");
+          s.getStudents().forEach(student -> System.out.println(student.ToString()));
+          break;
+
+        case 3:
+          System.out.println("Program zakończony.");
+          System.exit(0);
+          break;
+
+        default:
+          System.out.println("Nieprawidłowa opcja!");
+      }
+
+      scanner.close();
+    } catch (IOException e) {
+      System.out.println("Błąd: " + e.getMessage());
     }
+  }
 }

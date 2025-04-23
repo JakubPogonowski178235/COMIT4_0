@@ -1,12 +1,6 @@
-Krzysztof 20
-Janusz 40
-Krzysztof 20
-Janusz 40
-Krzysztof 20
-Janusz 40
-Krzysztof 20
-Janusz 40
-adrain  24
-jan 23 33
-maciek 12
-JAnek 10
+
+Jakub 21
+Marek 30
+Janusz 20
+Krzysztof 40
+jakub myszak 21
