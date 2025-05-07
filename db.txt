@@ -4,3 +4,8 @@ Marek 30
 Janusz 20
 Krzysztof 40
 jakub myszak 21
+marek szczera 21
+grzegorz teodorczyk 21 0000.20.03
+marek lupa 89 1966.05.25
+marek grechuta 78 02-03-1988
+marek grechuta  21 03-04-1977
